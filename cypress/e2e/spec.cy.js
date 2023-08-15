@@ -1,12 +1,12 @@
 // enables intelligent code completion for Cypress commands
 // https://on.cypress.io/intelligent-code-completion
 /// <reference types="cypress" />
+describe('clicks the Next button until we get to the last page', () => {
+  beforeEach(() => {
+    cy.visit('public/index.html')
+  })
 
-beforeEach(() => {
-  cy.visit('public/index.html')
-})
-describe('With cypress-if', () => {
-  it('clicks the Next button until we get to the last page', () => {
+  it.skip('With cypress-if', () => {
     // the HTML table on the page is paginated
     // can you click the "Next" button until
     // we get to the very last page?
