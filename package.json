@@ -1,20 +1,21 @@
 {
-  "name": "cypress-pagination-challenge",
+  "name": "bahmutov-cypress-pagination-challenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress open --e2e --browser=chrome"
   },
   "keywords": [
     "cypress-example",
     "cypress-challenge"
   ],
-  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "author": "Miloš Jovanović <milos.jov.rs@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "cypress": "12.17.3",
+    "cypress-if": "1.10.5",
     "prettier": "2.8.8"
   }
 }
