@@ -6,7 +6,7 @@ describe('clicks the Next button until we get to the last page', () => {
     cy.visit('public/index.html')
   })
 
-  it.skip('With cypress-if', () => {
+  it('With cypress-if', () => {
     // the HTML table on the page is paginated
     // can you click the "Next" button until
     // we get to the very last page?
