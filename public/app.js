@@ -4,6 +4,7 @@ const users = []
 
 faker.seed(123)
 for (let i = 0; i < 23; i++) {
+  // for (let i = 0; i < 3; i++) {
   users.push({
     id: faker.random.number(1000),
     firstName: faker.name.firstName(),

@@ -17,4 +17,19 @@ describe('clicks the Next button until we get to the last page', () => {
       cy.get('[value=last]').should('be.disabled')
     })
   })
+
+  it('With lodash, no plugins', () => {
+    cy.get('.pagecontroller-num').then((pages) => {
+      cy.get('.currentPage')
+        .invoke('attr', 'value')
+        .then((currentPage) => {
+          const click = pages.length - currentPage
+          Cypress._.times(click, () => cy.get('[value=next]').click())
+
+          cy.log('**confirm we are on the last page**')
+          cy.get('[value=next]').should('be.disabled')
+          cy.get('[value=last]').should('be.disabled')
+        })
+    })
+  })
 })
