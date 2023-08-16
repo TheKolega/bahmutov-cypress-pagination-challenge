@@ -15,6 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "12.17.3",
+    "cypress-await": "1.1.0",
     "cypress-if": "1.10.5",
     "prettier": "2.8.8"
   }

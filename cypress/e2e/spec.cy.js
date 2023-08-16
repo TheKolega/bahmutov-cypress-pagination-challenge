@@ -6,7 +6,7 @@ describe('clicks the Next button until we get to the last page', () => {
     cy.visit('public/index.html')
   })
 
-  it('With cypress-if', () => {
+  it.skip('With cypress-if', () => {
     // the HTML table on the page is paginated
     // can you click the "Next" button until
     // we get to the very last page?
@@ -33,5 +33,11 @@ describe('clicks the Next button until we get to the last page', () => {
           cy.get('[value=last]').should('be.disabled')
         })
     })
+  })
+
+  it('With cypress-await', () => {
+    while (cy.get('[value=next]').invoke('attr', 'disabled') !== 'disabled') {
+      cy.wait(500).log('clicking next').get('[value=next]').click()
+    }
   })
 })
