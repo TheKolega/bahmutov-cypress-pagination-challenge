@@ -1,3 +1,9 @@
-Cypress.Commands.add('keepClicking', (element) => {
-  cy.get(element).if('not.disabled').click().keepClicking(element)
-})
+Cypress.Commands.add(
+  'clickUntilDisabled',
+  {
+    prevSubject: true,
+  },
+  (subject) => {
+    cy.wrap(subject).if('not.disabled').click().clickUntilDisabled(subject)
+  },
+)

@@ -11,11 +11,13 @@ describe('clicks the Next button until we get to the last page', () => {
     // can you click the "Next" button until
     // we get to the very last page?
     // button selector "[value=next]"
-    cy.keepClicking('[value=next]').then(() => {
-      cy.log('**confirm we are on the last page**')
-      cy.get('[value=next]').should('be.disabled')
-      cy.get('[value=last]').should('be.disabled')
-    })
+    cy.get('[value=next]')
+      .clickUntilDisabled()
+      .then(() => {
+        cy.log('**confirm we are on the last page**')
+        cy.get('[value=next]').should('be.disabled')
+        cy.get('[value=last]').should('be.disabled')
+      })
   })
 
   it('With lodash, no plugins', () => {
